@@ -25,3 +25,40 @@ builtin
 
 $ type -t ls
 file
+
+### Debugging Bash Scripts ###
+
+When things don't go according to plan, you need to determine what exactly causes the script to fail. Bash provides extensive debugging features. The most common is to start up the subshell with the -x option, which will run the entire script in debug mode. Traces of each command plus its arguments are printed to standard output after the commands have been expanded but before they are executed.
+
+This is the script.sh script ran in debug mode.
+$ bash -x script.sh
+
+Using the set Bash built-in you can run in normal mode those portions of the script of which you are sure they are without fault, and display debugging information only for troublesome zones.
+
+$ set -x	# activate debugging from here
+$ set +x	# stop debugging from here
+
+### Pattern maching ###
+
+$ "*" - matches any given character
+$ "$" - matches a single character
+$ "[zbc]" - matches any of the characters inside the square brackets. If the first character within the brackets is either an exclamation point "!" or a carat "^", then the pattern means anything other than the remaining characters in the brackets. Basically, [^zbc] means, that your capturing group will match everything besides the "z", "b" or "c".
+
+Similar to ranges, you can specify character classes within braces.
+
+Character class | Description
+-------------------------------------------------------------------
+[:alnum:] 	| Alphanumeric
+[:alpha:] 	| Alphabetic
+[:ascii:] 	| ASCII
+[:blank:] 	| Space and tab
+[:ctrl:] 	| Control characters
+[:digit:] 	| Number
+[:graph:] 	| Anything other than control characters and space
+[:lower:] 	| Lowercase
+[:print:] 	| Anything other than control characters
+[:punct:] 	| Punctuation
+[:space:] 	| Whitespace including line breaks
+[:upper:] 	| Uppercase
+[:word:] 	| Letters, numbers, and underscore
+[:xdigit:] 	| Hexadecimal
