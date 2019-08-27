@@ -59,18 +59,19 @@ If the first character within the brackets is either an exclamation point "!" or
 
 Similar to ranges, you can specify character classes within braces.
 
-Character class | Description
-[:alnum:] 	| Alphanumeric
-[:alpha:] 	| Alphabetic
-[:ascii:] 	| ASCII
-[:blank:] 	| Space and tab
-[:ctrl:] 	| Control characters
-[:digit:] 	| Number
-[:graph:] 	| Anything other than control characters and space
-[:lower:] 	| Lowercase
-[:print:] 	| Anything other than control characters
-[:punct:] 	| Punctuation
-[:space:] 	| Whitespace including line breaks
-[:upper:] 	| Uppercase
-[:word:] 	| Letters, numbers, and underscore
-[:xdigit:] 	| Hexadecimal
+| Character class | Description |
+| --------------- | ----------- |
+| [:alnum:] | Alphanumeric |
+| [:alpha:] | Alphabetic |
+| [:ascii:] | ASCII |
+| [:blank:] | Space and tab |
+| [:ctrl:] | Control characters |
+| [:digit:] | Number |
+| [:graph:] | Anything other than control characters and space |
+| [:lower:] | Lowercase |
+| [:print:] | Anything other than control characters |
+| [:punct:] | Punctuation |
+| [:space:] | Whitespace including line breaks |
+| [:upper:] | Uppercase |
+| [:word:] | Letters, numbers, and underscore |
+| [:xdigit:] | Hexadecimal |
