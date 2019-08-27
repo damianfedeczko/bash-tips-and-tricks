@@ -17,6 +17,7 @@ The commands that you can run within your CLI are either files, built-ins, or ke
 
 To check if a word is a keyword, built-in or a file, you can use the type command:
 
+```sh
 $ type -t if
 keyword
 
@@ -25,24 +26,36 @@ builtin
 
 $ type -t ls
 file
+```
 
 ### Debugging Bash Scripts ###
 
 When things don't go according to plan, you need to determine what exactly causes the script to fail. Bash provides extensive debugging features. The most common is to start up the subshell with the -x option, which will run the entire script in debug mode. Traces of each command plus its arguments are printed to standard output after the commands have been expanded but before they are executed.
 
 This is the script.sh script ran in debug mode.
+```sh
 $ bash -x script.sh
+```
 
 Using the set Bash built-in you can run in normal mode those portions of the script of which you are sure they are without fault, and display debugging information only for troublesome zones.
 
+```sh
 $ set -x	# activate debugging from here
 $ set +x	# stop debugging from here
+```
 
 ### Pattern maching ###
 
+```sh
 $ "*" - matches any given character
+```
+```sh
 $ "$" - matches a single character
-$ "[zbc]" - matches any of the characters inside the square brackets. If the first character within the brackets is either an exclamation point "!" or a carat "^", then the pattern means anything other than the remaining characters in the brackets. Basically, [^zbc] means, that your capturing group will match everything besides the "z", "b" or "c".
+```
+```sh
+$ "[zbc]" - matches any of the characters inside the square brackets. 
+```
+If the first character within the brackets is either an exclamation point "!" or a carat "^", then the pattern means anything other than the remaining characters in the brackets. Basically, [^zbc] means, that your capturing group will match everything besides the "z", "b" or "c".
 
 Similar to ranges, you can specify character classes within braces.
 
