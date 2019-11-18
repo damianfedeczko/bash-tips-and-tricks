@@ -75,3 +75,14 @@ Similar to ranges, you can specify character classes within braces.
 | [:upper:] | Uppercase |
 | [:word:] | Letters, numbers, and underscore |
 | [:xdigit:] | Hexadecimal |
+
+### Searching data ###
+
+Data manipulation allows users to extract key elements of information for analysis. In many cases, the most challenging task will be the one involved in processing data in files such as XML or JSON.
+
+# XML #
+Extensible Markup Language (XML) allows you to arbitrarily create tags and elements that describe data.
+
+```sh
+$ grep -Pzo '(?s)<author>.*?<\/author>' book.xml
+```
